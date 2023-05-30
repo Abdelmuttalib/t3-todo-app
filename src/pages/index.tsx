@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <Seo title="Todo App" />
 
-      <Layout pageTitle="Home" className=" px-0 lg:px-0">
+      <Layout className=" px-0 lg:px-0">
         <TodoList />
       </Layout>
     </>

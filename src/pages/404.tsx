@@ -7,7 +7,7 @@ import { Layout } from "@/components/layout";
 
 export default function NotFoundPage() {
   return (
-    <Layout pageTitle="404 | Page Not Found">
+    <Layout>
       <Seo templateTitle="Not Found" />
 
       <main>

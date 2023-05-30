@@ -6,9 +6,7 @@ import GradientBackground from "../GradientBackground";
 import MainNav from "./MainNav";
 
 interface LayoutProps {
-  pageTitle: string | ReactNode;
   children: ReactNode;
-  rightSideActions?: ReactNode;
   className?: string;
 }
 

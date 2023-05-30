@@ -8,10 +8,7 @@ import { PencilSquareIcon } from "@heroicons/react/20/solid";
 import TodoForm from "./TodoForm";
 import type { Todo } from "@prisma/client";
 import { TodoFormActionEnum } from "@/utils/enums";
-
-export type FormActionType =
-  | TodoFormActionEnum.CREATE
-  | TodoFormActionEnum.EDIT;
+import { FormActionType } from "./types";
 
 interface TodoModalProps {
   actionType: FormActionType;

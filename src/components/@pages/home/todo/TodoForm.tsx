@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { z } from "zod";
+import type { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
@@ -7,13 +7,10 @@ import { Button } from "@/components/ui/button";
 import cn from "@/utils/cn";
 import useTranslation from "next-translate/useTranslation";
 import useTodos from "@/hooks/useTodos";
-import { type FormActionType } from "./TodoModal";
 import type { Todo } from "@prisma/client";
 import { TodoFormActionEnum } from "@/utils/enums";
-
-const todoFormSchema = z.object({
-  title: z.string().min(2, "validations.todo_title").nonempty(),
-});
+import type { FormActionType } from "./types";
+import { todoFormSchema } from "./schema";
 
 type TodoForm = z.infer<typeof todoFormSchema>;
 
