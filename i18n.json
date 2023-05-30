@@ -1,10 +1,7 @@
 {
-  "locales": ["en", "zh"],
+  "locales": ["en", "fr", "es", "zh"],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common"],
-    "/login": ["login"],
-    "/team": ["home", "team"],
-    "/user-management": ["home", "user"]
+    "*": ["home"]
   }
 }

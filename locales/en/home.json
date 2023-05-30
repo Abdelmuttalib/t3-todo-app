@@ -1,0 +1,23 @@
+{
+  "headings": {
+    "todos": "Todos",
+    "new_todo": "New Todo"
+  },
+  "paragraphs": {
+    "manage_your_todos": "Manage your todos"
+  },
+  "labels": {
+    "todo_title": "todo title"
+  },
+  "buttons": {
+    "new_todo": "New todo",
+    "create_todo": "Create todo",
+    "cancel": "Cancel",
+    "edit_todo": "Edit todo",
+    "save_changes": "Save changes"
+  },
+
+  "validations": {
+    "todo_title": "Kindly enter a todo title"
+  }
+}

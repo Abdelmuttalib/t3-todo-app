@@ -15,7 +15,7 @@ const iconButtonVariants = cva(
         // outline:
         //   "text-gray-900 bg-primary-50 border-primary-200 hover:bg-primary-50 focus:border-primary",
         outline:
-          "text-gray-900 bg-white border-gray-200 hover:bg-gray-50 focus:border-primary",
+          "text-gray-900 bg-white border-gray-200 hover:bg-gray-50 focus:border-primary dark:bg-gray-800/40 dark:text-gray-200 dark:border-gray-800",
 
         secondary:
           "text-primary-900 bg-primary-100/70 hover:bg-primary-100 focus:bg-primary-100/70 focus:border-primary-200",

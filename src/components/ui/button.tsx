@@ -12,10 +12,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "text-white bg-primary hover:bg-primary-600 focus:bg-primary disabled:bg-primary disabled:hover:bg-primary disabled:focus:bg-primary focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:bg-primary-600",
+          "text-white bg-primary hover:bg-primary-600 focus:bg-primary disabled:bg-primary disabled:hover:bg-primary disabled:focus:bg-primary focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:bg-primary-600 dark:ring-offset-gray-900",
 
         outline:
-          "text-primary-800 bg-white border-gray-200/100 hover:bg-gray-50 focus:border-primary",
+          "text-primary-800 bg-white border-gray-200/100 hover:bg-gray-50 focus:border-primary dark:bg-gray-800/40 dark:text-gray-200 dark:border-gray-800",
 
         secondary:
           "text-primary-800 bg-primary-100/70 hover:bg-primary-100 focus:bg-primary-100/70 focus:border-primary-200",
@@ -56,7 +56,10 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, children, isLoading, ...props }, ref) => {
+  (
+    { className, variant, size, children, isLoading, disabled, ...props },
+    ref
+  ) => {
     return (
       <button
         className={cn(
@@ -70,6 +73,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           }
         )}
         ref={ref}
+        disabled={disabled || isLoading}
         {...props}
       >
         {!isLoading ? (

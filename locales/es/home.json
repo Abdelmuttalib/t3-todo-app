@@ -1,0 +1,22 @@
+{
+  "headings": {
+    "todos": "Tareas",
+    "new_todo": "Nueva tarea"
+  },
+  "paragraphs": {
+    "manage_your_todos": "Administra tus tareas"
+  },
+  "labels": {
+    "todo_title": "título de la tarea"
+  },
+  "buttons": {
+    "new_todo": "Nueva tarea",
+    "create_todo": "Crear tarea",
+    "cancel": "Cancelar",
+    "edit_todo": "Editar tarea",
+    "save_changes": "Guardar cambios"
+  },
+  "validations": {
+    "todo_title": "Por favor, introduzca un título de todo"
+  }
+}

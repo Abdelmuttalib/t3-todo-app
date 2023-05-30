@@ -162,11 +162,6 @@ interface SideBarProps {
 
 const SideBar = ({ mode = "normal", setShowSidebarMenu }: SideBarProps) => {
   const { pathname } = useRouter();
-  const { data: session } = useSession();
-
-  const { data: teams } = api.team.admin.getAllTeamsByOrganization.useQuery({
-    organizationId: session?.user?.organizationId,
-  });
 
   // className={cn('relative border-r bg-gray-900', {
   //   'hidden h-full min-h-screen w-full flex-col lg:flex lg:w-72':

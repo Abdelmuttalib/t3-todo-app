@@ -1,18 +1,14 @@
 import { type AppType } from "next/app";
-import { type Session } from "next-auth";
-import { SessionProvider } from "next-auth/react";
 
 import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "next-themes";
 
-const MyApp: AppType<{ session: Session | null }> = ({
-  Component,
-  pageProps: { session, ...pageProps },
-}) => {
+const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <SessionProvider session={session}>
+    <ThemeProvider defaultTheme='system' attribute='class' storageKey='theme'>
       <Toaster
         position="top-right"
         richColors
@@ -24,7 +20,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         }}
       />
       <Component {...pageProps} />
-    </SessionProvider>
+    </ThemeProvider>
   );
 };
 

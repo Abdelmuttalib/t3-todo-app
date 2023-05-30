@@ -1,0 +1,22 @@
+{
+  "headings": {
+    "todos": "待办事项",
+    "new_todo": "新的待办事项"
+  },
+  "paragraphs": {
+    "manage_your_todos": "管理你的待办事项"
+  },
+  "labels": {
+    "todo_title": "待办事项标题"
+  },
+  "buttons": {
+    "new_todo": "新的待办事项",
+    "create_todo": "创建待办事项",
+    "cancel": "取消",
+    "edit_todo": "编辑待办事项",
+    "save_changes": "保存更改"
+  },
+  "validations": {
+    "todo_title": "请键入一个待办事项的标题"
+  }
+}

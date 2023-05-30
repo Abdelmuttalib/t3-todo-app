@@ -1,0 +1,22 @@
+{
+  "headings": {
+    "todos": "Tâches",
+    "new_todo": "Nouvelle tâche"
+  },
+  "paragraphs": {
+    "manage_your_todos": "Gérez vos tâches"
+  },
+  "labels": {
+    "todo_title": "titre de la tâche"
+  },
+  "buttons": {
+    "new_todo": "Nouvelle tâche",
+    "create_todo": "Créer une tâche",
+    "cancel": "Annuler",
+    "edit_todo": "Modifier la tâche",
+    "save_changes": "Enregistrer les modifications"
+  },
+  "validations": {
+    "todo_title": "Veuillez entrer un titre de todo"
+  }
+}
