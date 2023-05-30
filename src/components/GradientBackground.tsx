@@ -1,4 +1,3 @@
-import { useTheme } from "next-themes";
 import type { ReactNode } from "react";
 
 interface GradientBackgroundProps {
@@ -8,7 +7,6 @@ interface GradientBackgroundProps {
 export default function GradientBackground({
   children,
 }: GradientBackgroundProps) {
-  const { theme } = useTheme();
   return (
     <div className="isolate min-h-screen">
       <div className="absolute inset-x-0 top-[10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[10%]">

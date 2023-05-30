@@ -21,18 +21,6 @@ export default function TodoList() {
 
   const completedTodos = todos?.data?.filter((todo) => todo.completed === true);
 
-  const initial = {
-    id: "2312",
-    title: "Client Review & Feedback",
-    createdAt: new Date(
-      "Mon May 29 2023 19:29:08 GMT+0800 (Philippine Standard Time)"
-    ),
-    updatedAt: new Date(
-      "Mon May 29 2023 19:29:08 GMT+0800 (Philippine Standard Time)"
-    ),
-    completed: false,
-  };
-
   return (
     <div className="mt-8 flex flex-col gap-7">
       <div className="flex items-center justify-between gap-2 sm:flex-row sm:gap-0">
