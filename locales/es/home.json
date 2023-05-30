@@ -7,7 +7,8 @@
     "manage_your_todos": "Administra tus tareas"
   },
   "labels": {
-    "todo_title": "título de la tarea"
+    "todo_title": "título de la tarea",
+    "no_todos": "Tu lista de tareas está actualmente vacía. ¡Añade una tarea para empezar!"
   },
   "buttons": {
     "new_todo": "Nueva tarea",

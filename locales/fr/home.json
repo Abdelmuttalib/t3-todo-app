@@ -7,7 +7,8 @@
     "manage_your_todos": "Gérez vos tâches"
   },
   "labels": {
-    "todo_title": "titre de la tâche"
+    "todo_title": "titre de la tâche",
+    "no_todos": "Votre liste de tâches est actuellement vide. Ajoutez une tâche pour commencer!"
   },
   "buttons": {
     "new_todo": "Nouvelle tâche",

@@ -7,7 +7,8 @@
     "manage_your_todos": "Manage your todos"
   },
   "labels": {
-    "todo_title": "todo title"
+    "todo_title": "todo title",
+    "no_todos": "Your todo list is currently empty. Add a task to get the ball rolling!"
   },
   "buttons": {
     "new_todo": "New todo",

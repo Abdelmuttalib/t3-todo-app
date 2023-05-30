@@ -7,7 +7,8 @@
     "manage_your_todos": "管理你的待办事项"
   },
   "labels": {
-    "todo_title": "待办事项标题"
+    "todo_title": "待办事项标题",
+    "no_todos": "你的待办事项列表目前是空的。添加一个待办事项开始吧！"
   },
   "buttons": {
     "new_todo": "新的待办事项",

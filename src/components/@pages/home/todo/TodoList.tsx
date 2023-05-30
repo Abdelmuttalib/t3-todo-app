@@ -33,8 +33,6 @@ export default function TodoList() {
     completed: false,
   };
 
-  console.log(todos);
-
   return (
     <div className="mt-8 flex flex-col gap-7">
       <div className="flex items-center justify-between gap-2 sm:flex-row sm:gap-0">
@@ -51,6 +49,11 @@ export default function TodoList() {
         {!todos.isLoading &&
           todos.data &&
           todos?.data.map((todo: TTodo) => <Todo key={todo.id} {...todo} />)}
+        {!todos.isLoading && todos.data && todos.data.length === 0 && (
+          <p className="body-sm text-[#969796] dark:text-gray-700">
+            {t("labels.no_todos")}
+          </p>
+        )}
       </div>
       <div>
         <Button
