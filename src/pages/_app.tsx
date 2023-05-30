@@ -1,4 +1,5 @@
 import { type AppType } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 
 import { api } from "@/utils/api";
 
@@ -8,7 +9,7 @@ import { ThemeProvider } from "next-themes";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider defaultTheme='system' attribute='class' storageKey='theme'>
+    <ThemeProvider defaultTheme="system" attribute="class" storageKey="theme">
       <Toaster
         position="top-right"
         richColors
@@ -20,6 +21,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         }}
       />
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   );
 };
