@@ -1,7 +1,8 @@
 {
   "headings": {
     "todos": "Tâches",
-    "new_todo": "Nouvelle tâche"
+    "new_todo": "Nouvelle tâche",
+    "edit_todo": "Modifier la tâche"
   },
   "paragraphs": {
     "manage_your_todos": "Gérez vos tâches"

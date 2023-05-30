@@ -1,7 +1,8 @@
 {
   "headings": {
     "todos": "Tareas",
-    "new_todo": "Nueva tarea"
+    "new_todo": "Nueva tarea",
+    "edit_todo": "Editar tarea"
   },
   "paragraphs": {
     "manage_your_todos": "Administra tus tareas"

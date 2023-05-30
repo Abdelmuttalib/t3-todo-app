@@ -1,7 +1,8 @@
 {
   "headings": {
     "todos": "待办事项",
-    "new_todo": "新的待办事项"
+    "new_todo": "新的待办事项",
+    "edit_todo": "编辑待办事项"
   },
   "paragraphs": {
     "manage_your_todos": "管理你的待办事项"

@@ -1,7 +1,8 @@
 {
   "headings": {
     "todos": "Todos",
-    "new_todo": "New Todo"
+    "new_todo": "New Todo",
+    "edit_todo": "Edit todo"
   },
   "paragraphs": {
     "manage_your_todos": "Manage your todos"

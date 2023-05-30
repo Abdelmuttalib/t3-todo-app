@@ -85,7 +85,10 @@ export default function TodoModal({
                     as="h3"
                     className="h4 text-lg font-medium leading-6 text-gray-900 dark:text-gray-200"
                   >
-                    {t("headings.new_todo")}
+                    {actionType === TodoFormActionEnum.CREATE &&
+                      t("headings.new_todo")}
+                    {actionType === TodoFormActionEnum.EDIT &&
+                      t("headings.edit_todo")}
                   </Dialog.Title>
 
                   <div className="mt-4">
