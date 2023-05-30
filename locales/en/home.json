@@ -15,7 +15,8 @@
     "create_todo": "Create todo",
     "cancel": "Cancel",
     "edit_todo": "Edit todo",
-    "save_changes": "Save changes"
+    "save_changes": "Save changes",
+    "clear_completed": "Clear Completed"
   },
 
   "validations": {

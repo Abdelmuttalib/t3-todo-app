@@ -15,7 +15,8 @@
     "create_todo": "创建待办事项",
     "cancel": "取消",
     "edit_todo": "编辑待办事项",
-    "save_changes": "保存更改"
+    "save_changes": "保存更改",
+    "clear_completed": "清除已完成"
   },
   "validations": {
     "todo_title": "请键入一个待办事项的标题"

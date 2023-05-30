@@ -15,7 +15,8 @@
     "create_todo": "Crear tarea",
     "cancel": "Cancelar",
     "edit_todo": "Editar tarea",
-    "save_changes": "Guardar cambios"
+    "save_changes": "Guardar cambios",
+    "clear_completed": "Borrar completados"
   },
   "validations": {
     "todo_title": "Por favor, introduzca un título de todo"

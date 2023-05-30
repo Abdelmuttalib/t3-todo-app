@@ -15,7 +15,8 @@
     "create_todo": "Créer une tâche",
     "cancel": "Annuler",
     "edit_todo": "Modifier la tâche",
-    "save_changes": "Enregistrer les modifications"
+    "save_changes": "Enregistrer les modifications",
+    "clear_completed": "Effacer terminés"
   },
   "validations": {
     "todo_title": "Veuillez entrer un titre de todo"

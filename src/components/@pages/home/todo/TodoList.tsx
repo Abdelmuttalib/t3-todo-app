@@ -57,7 +57,8 @@ export default function TodoList() {
           }
           isLoading={clearCompletedTodosMutation.isLoading}
         >
-          <CheckCircleIcon className="ml-2 w-5" /> Clear Completed
+          <CheckCircleIcon className="ml-2 w-5" />{" "}
+          {t("buttons.clear_completed")}
         </Button>
       </div>
     </div>
