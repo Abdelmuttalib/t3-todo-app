@@ -50,7 +50,7 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         <DropdownMenuSeparator />
         {locales?.map((locale) => (
           <Link key={locale} href="" locale={locale}>
-            <DropdownMenuItem className="whitespace-nowrap py-2 font-medium focus:bg-gray-800/30 dark:hover:bg-gray-800/50">
+            <DropdownMenuItem className="whitespace-nowrap py-2 font-medium hover:bg-gray-200 focus:bg-gray-800/30 dark:hover:bg-gray-800/50">
               <p className="label-sm truncate whitespace-nowrap rounded-primary">
                 {locale}
               </p>
