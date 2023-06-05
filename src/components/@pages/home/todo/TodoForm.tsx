@@ -11,6 +11,7 @@ import type { Todo } from "@prisma/client";
 import { TodoFormActionEnum } from "@/utils/enums";
 import type { FormActionType } from "./types";
 import { todoFormSchema } from "./schema";
+import { Dispatch, SetStateAction } from "react";
 
 type TodoForm = z.infer<typeof todoFormSchema>;
 
@@ -19,6 +20,8 @@ interface TodoFormProps {
   actionType: FormActionType;
   todoId?: Todo["id"];
   todoTitle?: Todo["title"];
+  todos: Todo[];
+  setTodos: Dispatch<SetStateAction<Todo[]>>;
 }
 
 export default function TodoForm({
@@ -26,14 +29,16 @@ export default function TodoForm({
   closeModal,
   todoId,
   todoTitle,
+  todos,
+  setTodos,
 }: TodoFormProps) {
   const { t } = useTranslation("home");
-  const {
-    onCreateTodoFormSubmit,
-    onEditTodoFormSubmit,
-    createTodoMutation,
-    editTodoMutation,
-  } = useTodos();
+  // const {
+  //   onCreateTodoFormSubmit,
+  //   onEditTodoFormSubmit,
+  //   createTodoMutation,
+  //   editTodoMutation,
+  // } = useTodos();
   const {
     register,
     handleSubmit,
@@ -45,17 +50,44 @@ export default function TodoForm({
     },
   });
 
-  async function onSubmit(data: TodoForm): Promise<void> {
+  function onSubmit(data: TodoForm) {
     if (actionType === TodoFormActionEnum.EDIT && todoId) {
-      await onEditTodoFormSubmit
-        .mutateAsync({
-          ...data,
-          id: todoId,
-        })
-        .then(closeModal);
+      const newTodos = todos.map((todo) => {
+        if (todo.id === todoId) {
+          return {
+            ...todo,
+            title: data.title,
+            updatedAt: new Date(),
+          };
+        }
+        return todo;
+      });
+
+      setTodos(newTodos);
     } else if (actionType === TodoFormActionEnum.CREATE) {
-      await onCreateTodoFormSubmit.mutateAsync(data).then(closeModal);
+      // generate unique id
+
+      const newTodo = {
+        id: "id" + Math.random().toString(16).slice(2),
+        title: data.title,
+        completed: false,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+
+      setTodos([...todos, newTodo]);
     }
+    closeModal();
+    // if (actionType === TodoFormActionEnum.EDIT && todoId) {
+    //   await onEditTodoFormSubmit
+    //     .mutateAsync({
+    //       ...data,
+    //       id: todoId,
+    //     })
+    //     .then(closeModal);
+    // } else if (actionType === TodoFormActionEnum.CREATE) {
+    //   await onCreateTodoFormSubmit.mutateAsync(data).then(closeModal);
+    // }
   }
 
   function renderSubmitButtonText() {
@@ -82,7 +114,7 @@ export default function TodoForm({
             "border-red-500": errors.title,
           }
         )}
-        disabled={createTodoMutation.isLoading || editTodoMutation.isLoading}
+        // disabled={createTodoMutation.isLoading || editTodoMutation.isLoading}
       />
       {errors.title && (
         <p className="text-red-500">{t("errors.title.message")}</p>
@@ -93,7 +125,7 @@ export default function TodoForm({
           variant="outline"
           className="rounded-primary-lg"
           onClick={closeModal}
-          disabled={createTodoMutation.isLoading || editTodoMutation.isLoading}
+          // disabled={createTodoMutation.isLoading || editTodoMutation.isLoading}
         >
           {t("buttons.cancel")}
         </Button>
@@ -101,8 +133,8 @@ export default function TodoForm({
           type="submit"
           variant="primary"
           className="inline-flex h-fit flex-1 items-center justify-center gap-1 rounded-primary-lg px-4 py-3 capitalize sm:flex-initial"
-          disabled={createTodoMutation.isLoading || editTodoMutation.isLoading}
-          isLoading={createTodoMutation.isLoading || editTodoMutation.isLoading}
+          // disabled={createTodoMutation.isLoading || editTodoMutation.isLoading}
+          // isLoading={createTodoMutation.isLoading || editTodoMutation.isLoading}
         >
           {renderSubmitButtonText()}
         </Button>

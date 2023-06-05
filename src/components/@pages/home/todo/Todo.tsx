@@ -9,24 +9,53 @@ import TodoModal from "./TodoModal";
 import { TrashIcon } from "lucide-react";
 import { TodoFormActionEnum } from "@/utils/enums";
 
-export default function Todo({ id, title, createdAt, completed }: Todo) {
-  const { toggleTodoMutation, deleteTodoMutation } = useTodos();
+export default function Todo({
+  id,
+  title,
+  createdAt,
+  completed,
+  todos,
+  setTodos,
+}: Todo) {
+  // const { toggleTodoMutation, deleteTodoMutation } = useTodos();
+
+  // async function onToggleTodo(
+  //   todoId: Todo["id"],
+  //   completed: Todo["completed"]
+  // ) {
+  //   await toggleTodoMutation.mutateAsync({
+  //     completed: completed,
+  //     id: todoId,
+  //   });
+  // }
+
+  // async function onDeleteTodo(todoId: Todo["id"]) {
+  //   await deleteTodoMutation.mutateAsync({
+  //     id: todoId,
+  //   });
+  // }
 
   async function onToggleTodo(
     todoId: Todo["id"],
     completed: Todo["completed"]
   ) {
-    await toggleTodoMutation.mutateAsync({
-      completed: completed,
-      id: todoId,
+    const newTodos = todos.map((todo) => {
+      if (todo.id === todoId) {
+        return {
+          ...todo,
+          completed: completed,
+        };
+      }
+      return todo;
     });
+    setTodos(newTodos);
   }
 
   async function onDeleteTodo(todoId: Todo["id"]) {
-    await deleteTodoMutation.mutateAsync({
-      id: todoId,
-    });
+    const newTodos = todos.filter((todo) => todo.id !== todoId);
+    setTodos(newTodos);
   }
+
   return (
     <div className="flex flex-col gap-1 rounded-primary-lg border-2 border-transparent bg-white px-5 py-4 dark:border-gray-800/50 dark:bg-gray-900 dark:shadow-2xl">
       <div className="flex w-full items-center justify-between">
@@ -49,6 +78,8 @@ export default function Todo({ id, title, createdAt, completed }: Todo) {
             actionType={TodoFormActionEnum.EDIT}
             todoId={id}
             todoTitle={title}
+            todos={todos}
+            setTodos={setTodos}
           />
           <TrashIcon
             className="w-7 cursor-pointer text-gray-700 hover:text-red-500 dark:hover:text-red-400"

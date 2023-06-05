@@ -20,6 +20,8 @@ export default function TodoModal({
   actionType,
   todoId,
   todoTitle,
+  todos,
+  setTodos,
 }: TodoModalProps) {
   const { t } = useTranslation("home");
   const [isOpen, setIsOpen] = useState(false);
@@ -94,6 +96,8 @@ export default function TodoModal({
                     <TodoForm
                       closeModal={closeModal}
                       actionType={actionType}
+                      todos={todos}
+                      setTodos={setTodos}
                       {...(actionType === TodoFormActionEnum.EDIT &&
                         todoId && {
                           todoId,
