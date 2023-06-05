@@ -39,10 +39,7 @@ export default function Todo({
   //   });
   // }
 
-  async function onToggleTodo(
-    todoId: Todo["id"],
-    completed: Todo["completed"]
-  ) {
+  function onToggleTodo(todoId: Todo["id"], completed: Todo["completed"]) {
     const newTodos = todos.map((todo) => {
       if (todo.id === todoId) {
         return {
@@ -55,7 +52,7 @@ export default function Todo({
     setTodos(newTodos);
   }
 
-  async function onDeleteTodo(todoId: Todo["id"]) {
+  function onDeleteTodo(todoId: Todo["id"]) {
     const newTodos = todos.filter((todo) => todo.id !== todoId);
     setTodos(newTodos);
   }
