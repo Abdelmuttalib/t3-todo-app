@@ -6,12 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import cn from "@/utils/cn";
 import useTranslation from "next-translate/useTranslation";
-import useTodos from "@/hooks/useTodos";
+// import useTodos from "@/hooks/useTodos";
 import type { Todo } from "@prisma/client";
 import { TodoFormActionEnum } from "@/utils/enums";
 import type { FormActionType } from "./types";
 import { todoFormSchema } from "./schema";
-import { Dispatch, SetStateAction } from "react";
+import type { Dispatch, SetStateAction } from "react";
 
 type TodoForm = z.infer<typeof todoFormSchema>;
 
@@ -68,7 +68,7 @@ export default function TodoForm({
       // generate unique id
 
       const newTodo = {
-        id: "id" + Math.random().toString(16).slice(2),
+        id: `id ${Math.random().toString(16).slice(2)}`,
         title: data.title,
         completed: false,
         createdAt: new Date(),

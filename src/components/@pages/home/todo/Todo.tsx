@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { Checkbox } from "@/components/ui/checkbox";
 import { Skeleton } from "@/components/ui/skeleton";
-import useTodos from "@/hooks/useTodos";
+// import useTodos from "@/hooks/useTodos";
 import cn from "@/utils/cn";
 import { formatDate } from "@/utils/formatDate";
 import type { Todo } from "@prisma/client";
 import TodoModal from "./TodoModal";
 import { TrashIcon } from "lucide-react";
 import { TodoFormActionEnum } from "@/utils/enums";
+import type { Dispatch, SetStateAction } from "react";
 
 export default function Todo({
   id,
@@ -16,7 +17,10 @@ export default function Todo({
   completed,
   todos,
   setTodos,
-}: Todo) {
+}: Todo & {
+  todos: Todo[];
+  setTodos: Dispatch<SetStateAction<Todo[]>>;
+}) {
   // const { toggleTodoMutation, deleteTodoMutation } = useTodos();
 
   // async function onToggleTodo(

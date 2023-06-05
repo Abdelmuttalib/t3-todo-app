@@ -2,18 +2,21 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, Transition } from "@headlessui/react";
 import { PlusIcon } from "lucide-react";
-import { Fragment, useState } from "react";
+import { type Dispatch, type SetStateAction, Fragment, useState } from "react";
 import useTranslation from "next-translate/useTranslation";
 import { PencilSquareIcon } from "@heroicons/react/20/solid";
 import TodoForm from "./TodoForm";
 import type { Todo } from "@prisma/client";
 import { TodoFormActionEnum } from "@/utils/enums";
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { FormActionType } from "./types";
 
 interface TodoModalProps {
   actionType: FormActionType;
   todoId?: Todo["id"];
   todoTitle?: Todo["title"];
+  todos: Todo[];
+  setTodos: Dispatch<SetStateAction<Todo[]>>;
 }
 
 export default function TodoModal({

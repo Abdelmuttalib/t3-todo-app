@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import type { Todo as TTodo } from "@prisma/client";
-import Todo, { TodoLoader } from "./Todo";
+import Todo from "./Todo";
 import { Button } from "@/components/ui/button";
 import useTranslation from "next-translate/useTranslation";
 import cn from "@/utils/cn";
