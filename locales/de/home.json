@@ -1,0 +1,25 @@
+{
+  "headings": {
+    "todos": "Aufgaben",
+    "new_todo": "Neue Aufgabe",
+    "edit_todo": "Aufgabe bearbeiten"
+  },
+  "paragraphs": {
+    "manage_your_todos": "Verwalten Sie Ihre Aufgaben"
+  },
+  "labels": {
+    "todo_title": "Titel der Aufgabe",
+    "no_todos": "Ihre Aufgabenliste ist derzeit leer. Fügen Sie eine Aufgabe hinzu, um loszulegen!"
+  },
+  "buttons": {
+    "new_todo": "Neue Aufgabe",
+    "create_todo": "Aufgabe erstellen",
+    "cancel": "Abbrechen",
+    "edit_todo": "Aufgabe bearbeiten",
+    "save_changes": "Änderungen speichern",
+    "clear_completed": "Abgeschlossene löschen"
+  },
+  "validations": {
+    "todo_title": "Bitte geben Sie einen Aufgabentitel ein"
+  }
+}

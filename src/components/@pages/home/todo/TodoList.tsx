@@ -43,6 +43,7 @@ export default function TodoList() {
       <div className="flex items-center justify-between gap-2 sm:flex-row sm:gap-0">
         <div>
           <h2 className="h4 dark:text-gray-200">{t("headings.todos")}</h2>
+
           <p className="label-sm text-[#969796] dark:text-gray-600">
             {t("paragraphs.manage_your_todos")}
           </p>
